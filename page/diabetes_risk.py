@@ -306,7 +306,7 @@ else:
         df['pred_risk_category_snsv_80'] = result_sensitivity
         df['pred_risk_category_ppv_80'] = result_ppv
 
-        url = f'''https://docs.google.com/forms/d/e/1FAIpQLSfWP-9GW9NSUL2gvae4c0xDZ1dxTfeh5k7t8QIWXy6POBUqHw/formResponse?usp=pp_url&entry.1461253234={obj['name'][0]}&entry.97617893={obj['nik'][0]}&entry.771091418={obj['place'][0]}&entry.1911041054={obj['olahraga'][0]}&entry.104049788={obj['konsumsi_sayur_buah'][0]}&entry.185650305={obj['umur'][0]}&entry.1560480851={obj['sistol'][0]}&entry.761892027={obj['riwayat_keluarga_dm'][0]}&entry.955067944={probabilities[0]}&entry.2101683913={result_sensitivity}&entry.499972384={result_ppv}&entry.1459946696={obj['gds'][0]}'''
+        url = f'''https://docs.google.com/forms/d/e/1FAIpQLSfuQwrzQXnWlObkr7zRWY4sVh0TIgmAYzEqlh2rgwLek_vsPg/viewform?usp=pp_url&entry.1933998491={obj['name'][0]}&entry.1282672745={obj['nik'][0]}&entry.2055277506={obj['place'][0]}&entry.1243508628={obj['umur'][0]}&entry.1342692811={obj['sistol'][0]}&entry.1302379203={obj['riwayat_keluarga_dm'][0]}&entry.1627020830={obj['olahraga'][0]}&entry.1692142837={obj['konsumsi_sayur_buah'][0]}&entry.1108663614={probabilities[0]}&entry.1482602668={result_sensitivity}&entry.900833125={result_ppv}&entry.1263358475={obj['gds'][0]}'''
         response = requests.get(url)
 
         # res = '<b style="color:#CF2B2E;">Tinggi</b>' if result == 'Tinggi' else '<b style="color:#57855D;">Rendah</b>'''
