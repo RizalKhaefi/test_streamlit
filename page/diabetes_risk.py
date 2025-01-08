@@ -311,7 +311,19 @@ else:
 
         # res = '<b style="color:#CF2B2E;">Tinggi</b>' if result == 'Tinggi' else '<b style="color:#57855D;">Rendah</b>'''
         div_modal = st.container()
-        div_modal.success('Terima kasih kepada tenaga kesehatan dan relawan yang telah mengisi formulir pilot diabetes untuk memvalidasi dan menyempurnakan pemodelan kecerdasan artifisial dalam prediksi risiko DM', icon="✅")
+        div_modal.success(f'''Terima kasih kepada tenaga kesehatan dan relawan yang telah mengisi formulir pilot diabetes untuk memvalidasi dan menyempurnakan pemodelan kecerdasan artifisial dalam prediksi risiko DM
+        {obj['name'][0]}
+        {obj['nik'][0]}
+        {obj['place'][0]}
+        {obj['umur'][0]}
+        {obj['sistol'][0]}
+        {obj['riwayat_keluarga_dm'][0]}
+        {obj['olahraga'][0]}
+        {obj['konsumsi_sayur_buah'][0]}
+        {probabilities[0]}
+        {result_sensitivity}
+        {result_ppv}
+        {obj['gds'][0]}''', icon="✅")
 
         st.session_state.name = NAME
         st.session_state.nik = NIK
