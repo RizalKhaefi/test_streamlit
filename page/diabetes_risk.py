@@ -26,7 +26,7 @@ GDS = 40
 
 # set default session var
 if "diabetes_password_correct" not in st.session_state:
-    st.session_state.diabetes_password_correct = False
+    st.session_state.diabetes_password_correct = True
 
 if "name" not in st.session_state:
     st.session_state.name = NAME
